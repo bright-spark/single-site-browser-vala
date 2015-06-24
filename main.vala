@@ -3,9 +3,7 @@ using Gtk;
 using WebKit;
 
 public class Browser : Window {
-    /**
-     * Change the value for "URL" below to your destination for the single-site browser.
-     */
+    // Change the value for "URL" below to your destination for the single-site browser.
     private const string URL = "https://www.roblox.com/";
     private Notebook notebook;
     public Browser() {
@@ -42,5 +40,10 @@ public class Browser : Window {
         browser.show_all();
         Gtk.main();
         return 0;
+    }
+    try {
+        window.icon = IconTheme.get_default ().load_icon ("web-browser-symbolic", 48, 0);
+    } catch (Error e) {
+        stderr.printf ("Could not load application icon: %s\n", e.message);
     }
 }
