@@ -10,7 +10,7 @@ public class Browser : Window {
     private Notebook notebook;
     public Browser() {
         this.create_views();
-        this.destroy.connect (Gtk.main_quit)
+        this.destroy.connect (Gtk.main_quit);
     }
 
     private void create_views() {
