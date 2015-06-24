@@ -3,6 +3,9 @@ using Gtk;
 using WebKit;
 
 public class Browser : Window {
+    /**
+     * Change the value for "URL" below to your destination for the single-site browser.
+     */
     private const string URL = "https://www.roblox.com/";
     private Notebook notebook;
     public Browser() {
